@@ -22,11 +22,11 @@ COPY --from=vaultwarden /web-vault /opt/web-vault
 RUN \
     apt-get update \
     \
-    && apt-get install -y --no-install-recommends \
-        libmariadb-dev-compat=1:11.8.6-0+deb13u1 \
-        libpq5=17.9-0+deb13u1 \
-        nginx=1.26.3-3+deb13u7 \
-        sqlite3=3.46.1-7+deb13u1 \
+&& apt-get install -y --no-install-recommends \
+    libmariadb-dev-compat=1:11.8.6-0+deb13u1 \
+    libpq5=17.8-0+deb13u1 \
+    nginx=1.26.3-3+deb13u7 \
+    sqlite3=3.46.1-7+deb13u1 \
     && apt-get clean \
     && rm -f -r \
         /etc/nginx \
